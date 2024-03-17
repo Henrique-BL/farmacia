@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Cor de fundo branca */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    height: 100vh;
+}
+
+.header {
+    background-color: #17842a; /* Cor de fundo verde (#17842a) */
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaçamento interno */
+    margin-bottom: 20px; /* Adiciona margem inferior para separar o header do card */
+}
+
+.header-title {
+    color: #fff; /* Cor do texto branco */
+    margin: 0; /* Remove a margem padrão do título */
+}
+
+.card {
+    background-color: #17842a; /* Cor de fundo verde (#17842a) */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: center;
+    width: 300px; /* Largura do card */
+}
+
+.title {
+    color: #fff; /* Cor do texto branco */
+    margin: 0 0 20px; /* Margem inferior */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#search-button,
+#manage-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #096318; /* Cor de fundo verde mais escura (#096318) */
+    color: #fff; /* Cor do texto branco */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover,
+#manage-button:hover {
+    background-color: #0a741e; /* Cor de fundo mais clara no hover */
+}
+
+#manage-button {
+    margin-left: 10px; /* Adiciona uma margem à esquerda para separar os botões */
+}
