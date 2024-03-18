@@ -57,8 +57,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-#search-button:hover,
-#manage-button:hover {
+.buttons button:hover {
     background-color: #0a741e; /* Cor de fundo mais clara no hover */
 }
 
