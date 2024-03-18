@@ -15,7 +15,7 @@ body {
     background-color: #17842a;
     color: white;
     padding: 20px;
-    border-right: 3px solid #ccc; /* Aumenta a largura da borda */
+    border-right: 3px solid white; /* Aumenta a largura da borda */
     height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */
     overflow-y: auto; /* Adiciona scroll caso o conteúdo seja maior que a altura da viewport */
     position: fixed;

@@ -24,13 +24,14 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 220px;
+    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */
     background-color: #17842a;
     color: white;
-    padding: 20px;
-    border-right: 3px solid #ccc; /* Aumenta a largura da borda */
-    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */
+    padding:  20px 0px;
+    border-right: 3px solid white; /* Aumenta a largura da borda */
     overflow-y: auto; /* Adiciona scroll caso o conteúdo seja maior que a altura da viewport */
+    left: 0;
     position: fixed;
     
 
@@ -38,8 +39,12 @@ body {
 
 .sidebar h3 {
     margin-bottom: 10px;
+    text-align: center;
 }
-
+.sidebar-divider {
+    border: 1px solid white; /* Define a cor da linha branca */
+    margin: 0; /* Remove a margem padrão do elemento hr */
+}
 .filter-options label {
     display: block;
     margin-bottom: 5px;
@@ -134,155 +139,4 @@ body {
     background-color: #17842a;
 }
 
-.price-inputs {
-    margin-bottom: 5px; /* Adiciona espaço entre os inputs */
-}
-
-.price-inputs label {
-    display: block; /* Faz o título ocupar toda a largura disponível */
-    font-size: 12px; /* Ajusta o tamanho da fonte */
-    margin-bottom: 3px; /* Adiciona um pequeno espaço entre o título e a barra de input */
-}
-
-.price-inputs input {
-    width: 100%; /* Faz a barra de input ocupar toda a largura disponível */
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    font-size: 12px;
-}
-
-.price-inputs input:focus {
-    outline: none;
-    border-color: #00716b; /* Cor do foco ao selecionar */
-}
-
-#category-toggle {
-    display: none; /* Esconde o checkbox */
-}
-
-.category-title {
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-weight: bold; /* Adiciona negrito */
-    margin-top: 10px;
-}
-
-.arrow {
-    float: right; /* Alinha a seta à direita */
-    transition: transform 0.3s; /* Adiciona transição para suavizar a animação */
-}
-
-#category-toggle:checked ~ .category-title .arrow {
-    transform: rotate(180deg); /* Rotaciona a seta quando o checkbox está marcado */
-}
-
-.category-options {
-    display: none; /* Inicia oculto */
-}
-
-#category-toggle:checked + .category-options {
-    display: block; /* Mostra quando o checkbox está marcado */
-    font-weight: normal;
-}
-
-.category-options label {
-    display: block; /* Uma opção por linha */
-    margin-bottom: 3px; /* Adiciona um pequeno espaço entre as opções */
-    font-size: 12px; /* Ajusta o tamanho da fonte */
-}
-
-.category-options input[type="checkbox"] {
-    margin-right: 5px; /* Adiciona um pequeno espaço entre o checkbox e o texto */
-}
-
-
-/* CSS (principal.css) */
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%; /* Posiciona o topo do popup no centro vertical da tela */
-    left: 50%; /* Posiciona a esquerda do popup no centro horizontal da tela */
-    transform: translate(-50%, -50%); /* Move o popup de volta 50% da sua largura e altura */
-    background-color: rgb(138, 134, 134); /* Cor de fundo com transparência */
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 999; /* Certifica-se de que o popup aparece acima de outros elementos */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do popup */
-    color: #fff; /* Cor do texto */
-    width: 800px; /* Defina a largura desejada */
-    max-width: 80%; /* Defina a largura máxima permitida */
-}
-
-
-
-.popup h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-.popup-btnFechar {
-    position: absolute;
-    color: black;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.popup-content{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Duas colunas com largura igual */
-    gap: 10px;
-    
-    margin-top: 10px; /* Espaçamento entre o título e os campos */
-    
-    margin-right: 10px; /* Espaçamento entre o título e os campos */
-}
-
-.popup-content label {
-    white-space: nowrap;
-}
-
-.popup-content {
-    width: 100%;
-}
-
-/*Configurando botões do pop-up*/
-.button-popup {
-    grid-column: 1 / -1;
-    text-align: center;
-}
-.button-popup button{
-    padding: 5px 10px;
-    border: none;
-    border-radius: 0px;
-    background-color: #ccc;
-    color: black;
-    margin-left: 10px;
-    cursor: pointer;
-}
-.button-popup button:hover{
-    color: #17842a;
-    
-}
-
-
-/*Classes criadas em js para estruturar o popup*/
-.form-group {
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
 
