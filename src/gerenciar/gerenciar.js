@@ -107,7 +107,7 @@ function abriPopUpAdd() {
     popupContent.innerHTML = `
     
         
-    <h2>Editar Medicamento</h2><br>
+    <h2>Adicionar Medicamento</h2><br>
         
     <div class="popup-content">
         <div class="form-group">
