@@ -1,0 +1,155 @@
+.sidebar {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    
+    width: 220px;
+    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */ 
+    background-color: #17842a;
+    color: white;
+    border-right: 3px solid white; /* Aumenta a largura da borda */
+    position: fixed;
+    
+
+}
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    padding-left: 5px;
+
+    padding-left: 5px;
+    margin-top: 10px;
+}
+
+.sidebar a{
+    color: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    width: 100%;
+    margin-left: 50px;
+
+}
+.sidebar h3 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 3px solid white;
+    text-align: center;
+}
+
+
+.data-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    
+}
+.data-table-wrapper {
+    max-height: 600px; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adicione a barra de rolagem vertical quando necessário */
+}
+.data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px; /* Adicionado para diminuir o tamanho da fonte */
+}
+
+.data-table th {
+    background-color: grey;
+    color: #fff;
+    text-align: left;
+}
+
+
+/* CSS (principal.css) */
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%; /* Posiciona o topo do popup no centro vertical da tela */
+    left: 50%; /* Posiciona a esquerda do popup no centro horizontal da tela */
+    transform: translate(-50%, -50%); /* Move o popup de volta 50% da sua largura e altura */
+    background-color: rgb(138, 134, 134); /* Cor de fundo com transparência */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 999; /* Certifica-se de que o popup aparece acima de outros elementos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do popup */
+    color: #fff; /* Cor do texto */
+    width: 800px; /* Defina a largura desejada */
+    max-width: 80%; /* Defina a largura máxima permitida */
+}
+
+
+
+.popup h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.popup-btnFechar {
+    position: absolute;
+    color: black;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Duas colunas com largura igual */
+    gap: 10px;
+
+    margin-top: 10px; /* Espaçamento entre o título e os campos */
+
+    margin-right: 10px; /* Espaçamento entre o título e os campos */
+}
+
+.popup-content label {
+    white-space: nowrap;
+}
+
+.popup-content {
+    width: 100%;
+}
+
+/*Configurando botões do pop-up*/
+.button-popup {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+.button-popup button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0px;
+    background-color: #ccc;
+    color: black;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.button-popup button:hover{
+    color: #17842a;
+
+}
+
+
+/*Classes criadas em js para estruturar o popup*/
+.form-group {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}

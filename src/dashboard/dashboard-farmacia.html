@@ -15,9 +15,11 @@
         </header>
         <div class="sidebar">
             <h3>Utilitários</h3>
-            <hr class="sidebar-divider">
-            <a href="http://">Página Inicial</a>
-            <a href="http://">Acesso Clínica</a>
+
+            <div class="sidebar-content">
+                <a href="/index.html">Página Inicial</a>
+                <a href="http://">Acesso Clínica</a>
+            </div>
         </div>
 
     </div>
@@ -33,7 +35,7 @@
             <div id="card-add-medicamento" class="card" onclick="abriPopUpAdd()">
                 <h2 class="title">Adicionar Medicamento</h2>
             </div>
-            
+
             <div id="card-entrega" class="card" onclick="abriPopUpDel()">
                 <h2 class="title">Retirada</h2>
             </div>
@@ -45,12 +47,14 @@
             </div>
 
         </div>
+
+        <!-- Popup de edição -->
+        <div id="geralPopup" class="popup">
+            <div class="popup-content"></div>
+        </div>
     </div>
 
-    <!-- Popup de edição -->
-    <div id="geralPopup" class="popup">
-        <div class="popup-content"></div>
-    </div>
+
 </body>
 <script src="dashboard-farmacia.js"></script>
 

@@ -1,3 +1,4 @@
+@import url("/src/geral.css");
 body {
     margin: 0;
     padding: 0;
@@ -6,12 +7,16 @@ body {
 }
 
 .header {
-    background-color: #17842a; /* Cor de fundo verde (#17842a) */
+    background-color: #17842a;
+    /* Cor de fundo verde (#17842a) */
     color: white;
     width: 100%;
-    text-align: center; /* Centraliza o texto */
-    padding: 20px 0; /* Espaçamento interno */
-    margin-bottom: 20px; /* Adiciona margem inferior para separar o header do card */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 20px 0;
+    /* Espaçamento interno */
+    margin-bottom: 20px;
+    /* Adiciona margem inferior para separar o header do card */
 }
 
 
@@ -27,33 +32,41 @@ body {
 
     flex-direction: column;
     width: 220px;
-    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */ 
+    height: 100vh;
+    /* Faz a sidebar ocupar toda a altura da viewport */
     background-color: #17842a;
     color: white;
-    border-right: 3px solid white; /* Aumenta a largura da borda */
-    overflow-y: auto; /* Adiciona scroll caso o conteúdo seja maior que a altura da viewport */
-    top: 0; /* Posiciona a barra lateral no topo da viewport */
-    left: 0; /* Posiciona a barra lateral no canto esquerdo da viewport */
+    border-right: 3px solid white;
+    /* Aumenta a largura da borda */
     position: fixed;
-    
-
 
 }
-.sidebar-divider{
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
     width: 100%;
-    border: 1px solid white;
+    padding-left: 5px;
+
+    padding-left: 5px;
+    margin-top: 10px;
 }
-.sidebar h3 {
-    text-align: center;
-    font-size: inherit;
-    margin-bottom: 12px;
-}
-.sidebar a{
+
+.sidebar a {
+    display: block;
     color: inherit;
     font-size: inherit;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
+}
+
+.sidebar h3 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 3px solid white;
+    text-align: center;
 }
 
 .filter-options label {
@@ -64,9 +77,12 @@ body {
 .content {
     flex: 1;
     padding: 20px;
-    margin-left: 250px; /* Adiciona um espaço igual à largura da barra lateral para garantir que o conteúdo não seja ocultado */
-    padding-left: 20px; /* Adiciona um espaço à esquerda para separar o conteúdo da barra lateral */
-    box-sizing: border-box; /* Garante que o padding seja incluído na largura total do elemento */
+    margin-left: 250px;
+    /* Adiciona um espaço igual à largura da barra lateral para garantir que o conteúdo não seja ocultado */
+    padding-left: 20px;
+    /* Adiciona um espaço à esquerda para separar o conteúdo da barra lateral */
+    box-sizing: border-box;
+    /* Garante que o padding seja incluído na largura total do elemento */
 
 }
 
@@ -89,7 +105,8 @@ body {
     border: 1px solid #ccc;
     outline: none;
 }
-.button-style{
+
+.button-style {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -104,35 +121,14 @@ body {
     background-color: #17842a;
 }
 
-.data-table {
-    width: 10px;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    
-}
 
-.data-table-wrapper {
-    max-height: 500px;
-    overflow-y: auto; /* Adicione a barra de rolagem vertical quando necessário */
-    overflow-x: auto;
-}
-.data-table th, .data-table td {
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-size: 14px; /* Adicionado para diminuir o tamanho da fonte */
-}
-.data-table tr:hover{
+.data-table tr:hover {
     background-color: #ccc;
     cursor: pointer;
 }
-.data-table th {
-    background-color: grey;
-    color: #fff;
-    text-align: left;
-}
 
 
-.menu{
+.menu {
     display: flex;
     position: relative;
     align-items: row;
@@ -159,17 +155,26 @@ body {
 .popup {
     display: none;
     position: fixed;
-    top: 50%; /* Posiciona o topo do popup no centro vertical da tela */
-    left: 50%; /* Posiciona a esquerda do popup no centro horizontal da tela */
-    transform: translate(-50%, -50%); /* Move o popup de volta 50% da sua largura e altura */
-    background-color: rgb(138, 134, 134); /* Cor de fundo com transparência */
+    top: 50%;
+    /* Posiciona o topo do popup no centro vertical da tela */
+    left: 50%;
+    /* Posiciona a esquerda do popup no centro horizontal da tela */
+    transform: translate(-50%, -50%);
+    /* Move o popup de volta 50% da sua largura e altura */
+    background-color: rgb(138, 134, 134);
+    /* Cor de fundo com transparência */
     padding: 20px;
     border-radius: 5px;
-    z-index: 999; /* Certifica-se de que o popup aparece acima de outros elementos */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do popup */
-    color: #fff; /* Cor do texto */
-    width: 800px; /* Defina a largura desejada */
-    max-width: 80%; /* Defina a largura máxima permitida */
+    z-index: 999;
+    /* Certifica-se de que o popup aparece acima de outros elementos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma sombra ao redor do popup */
+    color: #fff;
+    /* Cor do texto */
+    width: 800px;
+    /* Defina a largura desejada */
+    max-width: 80%;
+    /* Defina a largura máxima permitida */
 }
 
 
@@ -178,6 +183,7 @@ body {
     margin-top: 0;
     margin-bottom: 20px;
 }
+
 .popup-btnFechar {
     position: absolute;
     color: black;
@@ -187,14 +193,17 @@ body {
     cursor: pointer;
 }
 
-.popup-content{
+.popup-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Duas colunas com largura igual */
+    grid-template-columns: repeat(4, 1fr);
+    /* Duas colunas com largura igual */
     gap: 10px;
 
-    margin-top: 10px; /* Espaçamento entre o título e os campos */
+    margin-top: 10px;
+    /* Espaçamento entre o título e os campos */
 
-    margin-right: 10px; /* Espaçamento entre o título e os campos */
+    margin-right: 10px;
+    /* Espaçamento entre o título e os campos */
 }
 
 .popup-content label {
@@ -210,7 +219,8 @@ body {
     grid-column: 1 / -1;
     text-align: center;
 }
-.button-popup button{
+
+.button-popup button {
     padding: 5px 10px;
     border: none;
     border-radius: 0px;
@@ -219,7 +229,8 @@ body {
     margin-left: 10px;
     cursor: pointer;
 }
-.button-popup button:hover{
+
+.button-popup button:hover {
     color: #17842a;
 
 }
