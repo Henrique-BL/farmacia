@@ -21,20 +21,39 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    flex-direction: column;
+    width: 220px;
     height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */ 
     background-color: #17842a;
     color: white;
-    padding: 20px;
     border-right: 3px solid white; /* Aumenta a largura da borda */
     overflow-y: auto; /* Adiciona scroll caso o conteúdo seja maior que a altura da viewport */
+    top: 0; /* Posiciona a barra lateral no topo da viewport */
+    left: 0; /* Posiciona a barra lateral no canto esquerdo da viewport */
     position: fixed;
     
 
-}
 
+}
+.sidebar-divider{
+    width: 100%;
+    border: 1px solid white;
+}
 .sidebar h3 {
-    margin-bottom: 10px;
+    text-align: center;
+    font-size: inherit;
+    margin-bottom: 12px;
+}
+.sidebar a{
+    color: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    margin-bottom: 20px;
+
 }
 
 .filter-options label {

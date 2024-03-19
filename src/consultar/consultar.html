@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFC - VET</title>
+    <link rel="stylesheet" href="consultar.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title"> Farmácia</h1>
+        </header>
+        <div class="sidebar">
+            <h3>Filtragem</h3>
+            <hr class="sidebar-divider">
+            <div class="filter-options">
+
+                <h4>Preço</h4>
+                <div class="price-inputs">
+                    <label for="min-price">Mínimo:</label>
+                    <input type="number" id="min-price" name="min-price" step="0.01">
+                </div>
+
+                <div class="price-inputs">
+                    <label for="max-price">Máximo:</label>
+                    <input type="number" id="max-price" name="max-price" step="0.01">
+                </div>
+
+                <!--Categorias -->
+
+                <label class="category-title filter-title" for="category-toggle">Categorias <span class="arrow">
+                        &#9660;</span></h4></label>
+                <input class="filter-toggle" type="checkbox" id="category-toggle">
+                <div class="filter-options2">
+                    <label><input type="checkbox" name="category" value="antibiotico"> Antibiótico</label>
+                    <label><input type="checkbox" name="category" value="analgesico"> Analgésico</label>
+                    <label><input type="checkbox" name="category" value="antiinflamatorio">Anti-inflamatório</label>
+                    <!-- Adicione mais opções conforme necessário -->
+                </div>
+
+                <!-- Uso -->
+                <label class="uso-title filter-title" for="uso-toggle">Uso <span class="arrow">&#9660;</span></h4>
+                </label>
+                <input class="filter-toggle" type="checkbox" id="uso-toggle">
+                <div class="filter-options2">
+                    <label><input type="checkbox" name="uso" value="oral"> Oral</label>
+                    <label><input type="checkbox" name="uso" value="injetável"> Injetável</label>
+                </div>
+
+                <!-- Generico -->
+                <label class="generico-title filter-title" for="generico-toggle">Genérico <span
+                        class="arrow">&#9660;</span></label>
+                <input class="filter-toggle" type="checkbox" name="generico" id="generico-toggle">
+                <div class="filter-options2">
+                    <label for="generico-sim">Sim</label>
+                    <input type="radio" name="generico" value="sim" id="generico-sim">
+                    <label for="generico-nao">Não</label>
+                    <input type="radio" name="generico" value="nao" id="generico-nao">
+                </div>
+
+                <!--Labs -->
+                <label class="lab-title filter-title" for="lab-toggle">Laboratório <span class="arrow">
+                        &#9660;</span></h4></label>
+                <input class="filter-toggle" type="checkbox" id="lab-toggle">
+                <div class="filter-options2">
+                    <label><input type="checkbox" name="lab" value="vetpharma"> Vetpharma</label>
+                    <label><input type="checkbox" name="lab" value="pfizer"> Pfizer</label>
+                    <label><input type="checkbox" name="lab" value="vetLife">VetLife</label>
+                    <label><input type="checkbox" name="lab" value="vetPharma">VetPharma</label>
+                    <label><input type="checkbox" name="lab" value="animalPlus">AnimalPlus</label>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="title">Bem-vindo!</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Digite o nome do medicamento que deseja buscar">
+            <button>Consultar</button>
+        </div>
+        <div class="data-table-wrapper">
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Composição</th>
+                        <th>Dosagem</th>
+                        <th>Unidade</th>
+                        <th>Descrição</th>
+                        <th>Uso</th>
+                        <th>Genérico</th>
+                        <th>Controlado</th>
+                        <th>Laboratório</th>
+                        <th>Categoria</th>
+                        <th>Bula</th>
+                        <th>Lote</th>
+                        <th>Validade</th>
+                        <th>Data de Compra</th>
+                        <th>Preço(R$)</th>
+                        <th>Quantidade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Paracetamol</td>
+                        <td>Paracetamol</td>
+                        <td>500</td>
+                        <td>mg</td>
+                        <td>Analgésico e antipirético, utilizado no tratamento de dores leves a moderadas e redução
+                            de
+                            febre.</td>
+                        <td>Oral</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Pfizer</td>
+                        <td>Analgésico</td>
+                        <td><a href="bula_paracetamol.pdf">Link</a></td>
+                        <td>AB12345</td>
+                        <td>01/2024</td>
+                        <td>10/01/2023</td>
+                        <td>10.00</td>
+                        <td>30</td>
+                        <td>Disponivel</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ibuprofeno</td>
+                        <td>Ibuprofeno</td>
+                        <td>400</td>
+                        <td>mg</td>
+                        <td>Anti-inflamatório não esteroide, utilizado no alívio de dores e inflamações, como
+                            artrite e
+                            cólicas menstruais.</td>
+                        <td>Oral</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Bayer</td>
+                        <td>Analgésico</td>
+                        <td><a href="bula_ibuprofeno.pdf">Link</a></td>
+                        <td>BC23456</td>
+                        <td>02/2024</td>
+                        <td>15/01/2023</td>
+                        <td>15.50</td>
+                        <td>25</td>
+                        <td>Disponivel</td>
+
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Omeprazol</td>
+                        <td>Omeprazol</td>
+                        <td>20</td>
+                        <td>mg</td>
+                        <td>Inibidor da bomba de prótons, utilizado no tratamento de úlceras gástricas, refluxo
+                            gastroesofágico e síndrome de Zollinger-Ellison.</td>
+                        <td>Oral</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Medley</td>
+                        <td>Antiácido</td>
+                        <td><a href="bula_omeprazol.pdf">Link</a></td>
+                        <td>MN01234</td>
+                        <td>09/2024</td>
+                        <td>25/02/2023</td>
+                        <td>18.00</td>
+                        <td>115</td>
+                        <td>Disponivel</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Loratadina</td>
+                        <td>Loratadina</td>
+                        <td>10</td>
+                        <td>mg</td>
+                        <td>Antialérgico, utilizado no alívio dos sintomas de rinite alérgica, como espirros, coriza
+                            e
+                            coceira nasal, e urticária.</td>
+                        <td>Oral</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>EMS</td>
+                        <td>Antialérgico</td>
+                        <td><a href="bula_loratadina.pdf">Link</a></td>
+                        <td>OP23456</td>
+                        <td>10/2024</td>
+                        <td>03/03/2023</td>
+                        <td>12.50</td>
+                        <td>9</td>
+                        <td>Disponivel</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Simeticona</td>
+                        <td>Simeticona</td>
+                        <td>75</td>
+                        <td>mg</td>
+                        <td>Antiflatulento, utilizado no alívio dos sintomas de excesso de gases no trato digestivo,
+                            como inchaço e desconforto abdominal.</td>
+                        <td>Oral</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Neo Química</td>
+                        <td>Antiflatulento</td>
+                        <td><a href="bula_simeticona.pdf">Link</a></td>
+                        <td>QR34567</td>
+                        <td>11/2024</td>
+                        <td>05/03/2023</td>
+                        <td>8.00</td>
+                        <td>25</td>
+                        <td>Disponivel</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    </div>
+
+</body>
+<script src="consultar.js"></script>
+
+</html>

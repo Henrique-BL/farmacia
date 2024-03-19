@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFC - VET</title>
+    <link rel="stylesheet" href="dashboard-farmacia.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">Dashboard Farmácia</h1>
+        </header>
+        <div class="sidebar">
+            <h3>Utilitários</h3>
+            <hr class="sidebar-divider">
+            <a href="http://">Página Inicial</a>
+            <a href="http://">Acesso Clínica</a>
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="cards">
+            <div id="card-estoque" class="card">
+                <h2 class="title">Gerenciar Estoque</h2>
+            </div>
+            <div id="card-consulta" class="card">
+                <h2 class="title">Consultar</h2>
+
+            </div>
+            <div id="card-add-medicamento" class="card" onclick="abriPopUpAdd()">
+                <h2 class="title">Adicionar Medicamento</h2>
+            </div>
+            
+            <div id="card-entrega" class="card" onclick="abriPopUpDel()">
+                <h2 class="title">Retirada</h2>
+            </div>
+            <div id="card-relatório" class="card">
+                <h2 class="title">Relatório</h2>
+            </div>
+            <div id="card-laboratorio" class="card">
+                <h2 class="title">Laboratórios</h2>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Popup de edição -->
+    <div id="geralPopup" class="popup">
+        <div class="popup-content"></div>
+    </div>
+</body>
+<script src="dashboard-farmacia.js"></script>
+
+</html>
