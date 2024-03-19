@@ -18,20 +18,16 @@ body {
 .container {
     display: flex;
     position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
 }
 
 .sidebar {
-    width: 220px;
-    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */
+    width: 200px;
+    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */ 
     background-color: #17842a;
     color: white;
-    padding:  20px 0px;
+    padding: 20px;
     border-right: 3px solid white; /* Aumenta a largura da borda */
     overflow-y: auto; /* Adiciona scroll caso o conteúdo seja maior que a altura da viewport */
-    left: 0;
     position: fixed;
     
 
@@ -39,12 +35,8 @@ body {
 
 .sidebar h3 {
     margin-bottom: 10px;
-    text-align: center;
 }
-.sidebar-divider {
-    border: 1px solid white; /* Define a cor da linha branca */
-    margin: 0; /* Remove a margem padrão do elemento hr */
-}
+
 .filter-options label {
     display: block;
     margin-bottom: 5px;
@@ -57,7 +49,6 @@ body {
     padding-left: 20px; /* Adiciona um espaço à esquerda para separar o conteúdo da barra lateral */
     box-sizing: border-box; /* Garante que o padding seja incluído na largura total do elemento */
 
-   
 }
 
 .title {
@@ -90,18 +81,22 @@ body {
     transition: background-color 0.3s ease;
 }
 
-
 .search-bar button:hover {
     background-color: #17842a;
 }
 
 .data-table {
-    width: 100%;
+    width: 10px;
     border-collapse: collapse;
     margin-bottom: 20px;
     
 }
 
+.data-table-wrapper {
+    max-height: 500px;
+    overflow-y: auto; /* Adicione a barra de rolagem vertical quando necessário */
+    overflow-x: auto;
+}
 .data-table th, .data-table td {
     padding: 10px;
     border: 1px solid #ccc;

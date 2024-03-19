@@ -12,11 +12,11 @@ body {
 
 .sidebar {
     width: 200px;
+    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */ 
     background-color: #17842a;
     color: white;
     padding: 20px;
     border-right: 3px solid white; /* Aumenta a largura da borda */
-    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */
     overflow-y: auto; /* Adiciona scroll caso o conteúdo seja maior que a altura da viewport */
     position: fixed;
     
@@ -79,11 +79,15 @@ body {
 
 .data-table {
     width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     
 }
-
+.data-table-wrapper {
+    max-height: 600px; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adicione a barra de rolagem vertical quando necessário */
+}
 .data-table th, .data-table td {
     padding: 10px;
     border: 1px solid #ccc;

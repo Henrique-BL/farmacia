@@ -26,11 +26,13 @@ function abrirPopupEdicao(row) {
     // Preenche o popup com os dados da linha
     const popupContent = document.createElement('div');
     popupContent.innerHTML = `
-    
-        
     <h2>Editar Medicamento</h2><br>
         
     <div class="popup-content">
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="text" id="id" value="${dadosLinha[0]}">
+        </div>
         <div class="form-group">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" value="${dadosLinha[1]}">
@@ -40,56 +42,70 @@ function abrirPopupEdicao(row) {
             <input type="text" id="composicao" value="${dadosLinha[2]}">
         </div>
         <div class="form-group">
+            <label for="dosagem">Dosagem:</label>
+            <input type="text" id="dosagem" value="${dadosLinha[3]}">
+        </div>
+        <div class="form-group">
+            <label for="unidade">Unidade:</label>
+            <input type="text" id="unidade" value="${dadosLinha[4]}">
+        </div>
+        <div class="form-group">
             <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" value="${dadosLinha[3]}">
+            <input type="text" id="descricao" value="${dadosLinha[5]}">
         </div>
         <div class="form-group">
             <label for="uso">Uso:</label>
-            <input type="text" id="uso" value="${dadosLinha[4]}">
+            <input type="text" id="uso" value="${dadosLinha[6]}">
         </div>
         <div class="form-group">
             <label for="generico">Genérico:</label>
-            <input type="text" id="generico" value="${dadosLinha[5]}">
+            <input type="text" id="generico" value="${dadosLinha[7]}">
         </div>
         <div class="form-group">
             <label for="controlado">Controlado:</label>
-            <input type="text" id="controlado" value="${dadosLinha[6]}">
+            <input type="text" id="controlado" value="${dadosLinha[8]}">
         </div>
         <div class="form-group">
             <label for="laboratorio">Laboratório:</label>
-            <input type="text" id="laboratorio" value="${dadosLinha[7]}">
+            <input type="text" id="laboratorio" value="${dadosLinha[9]}">
         </div>
         <div class="form-group">
             <label for="categoria">Categoria:</label>
-            <input type="text" id="categoria" value="${dadosLinha[8]}">
+            <input type="text" id="categoria" value="${dadosLinha[10]}">
         </div>
         <div class="form-group">
             <label for="bula">Bula:</label>
-            <input type="text" id="bula" value="${dadosLinha[9]}">
+            <input type="text" id="bula" value="${dadosLinha[11]}">
         </div>
         <div class="form-group">
             <label for="lote">Lote:</label>
-            <input type="text" id="lote" value="${dadosLinha[10]}">
+            <input type="text" id="lote" value="${dadosLinha[12]}">
         </div>
         <div class="form-group">
             <label for="validade">Validade:</label>
-            <input type="text" id="validade" value="${dadosLinha[11]}">
+            <input type="text" id="validade" value="${dadosLinha[13]}">
         </div>
         <div class="form-group">
             <label for="dataCompra">Data de Compra:</label>
-            <input type="text" id="dataCompra" value="${dadosLinha[12]}">
+            <input type="text" id="dataCompra" value="${dadosLinha[14]}">
         </div>
         <div class="form-group">
             <label for="preco">Preço (R$):</label>
-            <input type="text" id="preco" value="${dadosLinha[13]}">
+            <input type="text" id="preco" value="${dadosLinha[15]}">
+        </div>
+        <div class="form-group">
+            <label for="quantidade">Quantidade:</label>
+            <input type="text" id="quantidade" value="${dadosLinha[16]}">
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <input type="text" id="status" value="${dadosLinha[17]}">
         </div>
         <div class="button-popup">
             <span class="popup-btnFechar" onclick="fecharPopup()">&times;</span>
             <button onclick="salvarEdicao()">Salvar</button>
         </div>
     </div>`;
-
-
 
     // Limpa o conteúdo anterior e adiciona o novo conteúdo ao popup
     popup.innerHTML = '';
@@ -105,7 +121,6 @@ function abriPopUpAdd() {
     // Preenche o popup com os dados da linha
     const popupContent = document.createElement('div');
     popupContent.innerHTML = `
-    
         
     <h2>Adicionar Medicamento</h2><br>
         
@@ -161,6 +176,14 @@ function abriPopUpAdd() {
         <div class="form-group">
             <label for="preco">Preço (R$):</label>
             <input type="text" id="preco" value="">
+        </div>
+        <div class="form-group">
+            <label for="quantidade">Quantidade:</label>
+            <input type="text" id="quantidade" value="">
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <input type="text" id="status" value="">
         </div>
         <div class="button-popup">
             <span class="popup-btnFechar" onclick="fecharPopup()">&times;</span>
