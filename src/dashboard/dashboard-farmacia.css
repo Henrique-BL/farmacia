@@ -17,7 +17,7 @@ body {
     width: 100%;
     text-align: center; /* Centraliza o texto */
     padding: 20px 250px; /* Espaçamento interno */
-    /* Adiciona margem inferior para separar o header do card */
+    border-bottom: 3px solid white;
 }
 
 .header-title {
@@ -29,8 +29,9 @@ body {
     justify-content:center; /* Centraliza horizontalmente os cards */
     align-items:center; /* Centraliza verticalmente os cards */
     height: 600px;
+    margin-left: 220px;
+    margin-right: 220px;
     padding: 20px;
-    margin-left: 220px;    /* Adiciona um espaço igual à largura da barra lateral para garantir que o conteúdo não seja ocultado */
     border: 20px solid  #096318 ;
     background-color: white;
     box-sizing: border-box; /* Garante que o padding seja incluído na largura total do elemento */
@@ -39,12 +40,12 @@ body {
 
 .cards{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 70%;
     height: 70%;
+    width: 70%;
     
 }
 
@@ -56,6 +57,7 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 3px;
+    margin:  10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
     width: calc(50% - 40px); /* Define a largura de cada card para ocupar metade da largura da div cards */
     max-width: 250px;

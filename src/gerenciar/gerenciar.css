@@ -25,54 +25,6 @@ body {
     position: relative;
 }
 
-.sidebar {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-
-    flex-direction: column;
-    width: 220px;
-    height: 100vh;
-    /* Faz a sidebar ocupar toda a altura da viewport */
-    background-color: #17842a;
-    color: white;
-    border-right: 3px solid white;
-    /* Aumenta a largura da borda */
-    position: fixed;
-
-}
-
-.sidebar-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 100%;
-    padding-left: 5px;
-
-    padding-left: 5px;
-    margin-top: 10px;
-}
-
-.sidebar a {
-    display: block;
-    color: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    margin-bottom: 10px;
-
-}
-
-.sidebar h3 {
-    width: 100%;
-    margin-bottom: 10px;
-    border-bottom: 3px solid white;
-    text-align: center;
-}
-
-.filter-options label {
-    display: block;
-    margin-bottom: 5px;
-}
 
 .content {
     flex: 1;
