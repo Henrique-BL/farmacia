@@ -2,7 +2,6 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    
     width: 220px;
     height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */ 
     background-color: #17842a;
