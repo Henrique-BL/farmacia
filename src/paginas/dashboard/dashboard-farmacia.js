@@ -1,24 +1,24 @@
 document.getElementById('card-estoque').addEventListener('click', function (event) {
     // Evita o comportamento padrão do formulário que é atualizar a página
     event.preventDefault();
-    window.location.href = '/src/paginas/gerenciar/gerenciar.html';
+    window.location.href = '/farmacia/src/paginas/gerenciar/gerenciar.html';
 });
 document.getElementById('card-consulta').addEventListener('click', function (event) {
     // Evita o comportamento padrão do formulário que é atualizar a página
     event.preventDefault();
-    window.location.href = '/src/paginas/consultar/consultar.html';
+    window.location.href = '/farmacia/src/paginas/consultar/consultar.html';
 });
 
 document.getElementById('card-relatório').addEventListener('click', function (event) {
     // Evita o comportamento padrão do formulário que é atualizar a página
     event.preventDefault();
-window.location.href = '/src/paginas/relatorio/relatorio.html';
+window.location.href = '/farmacia/src/paginas/relatorio/relatorio.html';
 });
 
 document.getElementById('card-laboratorio').addEventListener('click', function (event) {
     // Evita o comportamento padrão do formulário que é atualizar a página
     event.preventDefault();
-window.location.href = '/src/paginas/laboratorios/gerLab.html';
+window.location.href = '/farmacia/src/paginas/laboratorios/gerLab.html';
 });
 
 
