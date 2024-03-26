@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFC - VET</title>
+    <link rel="stylesheet" href="gerLab.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title"> Laboratórios - Farmácia</h1>
+        </header>
+        <div class="sidebar">
+            <h3>Utilitários</h3>
+            <div class="sidebar-content">
+                <a href="/index.html">Página Inicial</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="title">Bem-vindo!</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Digite o nome ou código do laboratório que deseja buscar">
+            <button class="button-style">Buscar</button>
+        </div>
+        <div class="menu">
+            <button class="button-style" id="addButton">Adicionar</button>
+            <button class="button-style" id="delButton">Excluir</button>
+        </div>
+        <div class="data-table-wrapper">
+            <table class="data-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Popup de edição -->
+    <div id="geralPopup" class="popup">
+        <div class="popup-content"></div>
+    </div>
+</body>
+
+</html>
+
+<script type="module"src="gerLab.js"></script>

@@ -14,6 +14,8 @@ body {
 .flex-column{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 0 20px;
 }
 
@@ -31,9 +33,6 @@ body {
     margin: 0;
     text-align: center;
 }
-
-
-
 .login-button, .signup-button {
     padding: 10px 20px;
     margin-left: 10px;
@@ -44,12 +43,6 @@ body {
     cursor: pointer;
 }
 
-.clinic-info, .contact-info {
-    padding: 40px 0;
-    background-color: #f5f5f5;
-    border-top: 1px solid #17842a; /* Adiciona uma borda superior para separar as seções */
-}
-
 .features-section {
     display: flex;
     justify-content: center;
@@ -57,15 +50,108 @@ body {
     margin-top: 20px; /* Adiciona espaçamento entre o header e os cards */
 }
 
+
+.clinic-info, .contact-info {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    border-top: 1px solid #17842a; /* Adiciona uma borda superior para separar as seções */
+}
+
+.clinic-info{
+    background-color: #17842a;
+}
+.clinic-info h2{
+    text-align: center;
+    color: white;
+}
+
+
+.services{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.coluna{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #17842a; /* Cor da borda */
+    border-radius: 10px;
+}
+
+.coluna h3{
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #17842a; /* Cor da borda */
+}
+.coluna-content p{
+    text-align: left;
+}
+
+.contact-info{
+    background-color: white;
+}
+
+.contact-info h2{
+    text-align: center;
+    width: 100%;
+}
+
+.clinic-workers-title{
+    width: 100%;
+    text-align: center;
+}
+.clinic-workers h3{
+    border-bottom: 2px solid #17842a; 
+}
+.media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 2px solid #17842a; /* Cor da borda */
+}
+.media img{
+    width: 180px;
+    height: 180px;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+.worker{
+    margin-right: 20px;
+}
+.worker p{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 .card {
     width: 200px;
-    background-color: #f5f5f5;
+    background-color: white;
     padding: 20px;
     margin: 0 10px;
     text-align: center;
     border-radius: 5px;
-    cursor: pointer; /* Adiciona cursor de ponteiro */
-    border: 2px solid #17842a; /* Cor da borda */
+    border: 3px solid #096318; /* Cor da borda */
     transition: border-color 0.3s; /* Adiciona transição suave para a mudança de cor da borda */
 }
 
@@ -81,6 +167,14 @@ body {
     cursor: pointer;
     background-color: #ccc;
 }
+
+
+
+
+
+
+
+
 .footer {
     position: relative;
     background-color: #17842a; /* Cor de fundo */

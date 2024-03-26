@@ -1,3 +1,4 @@
 *.asta
 *.pdf
 screenshots/
+node_modules/

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFC - VET</title>
+    <link rel="stylesheet" href="relatorio.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-title">Relatório</h1>
+    </header>
+
+    <div class="container">
+        
+        <div class="time-period">
+            <div></div>
+            <h2>Selecione o Período</h2>
+            <div class="select-box">
+                <select id="periodo">
+                    <option value="2023/1">2023/1</option>
+                    <option value="2023/2">2023/2</option>
+                    <option value="2024/1">2024/1</option>
+                    <option value="2024/2">2024/2</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select>
+            </div>
+
+            <a class="download-button" href=""> Baixar Relatório</a>
+
+        </div>
+
+        <div class="relatorio">
+            <div class="relatorio-content">
+                <div class="relatorio-graphics">
+                    <div class="bar-graphics">
+                        <h3>Índice de Satisfação Geral</h3>
+                        <div class="graphic" id="bar-graphic1"></div>
+                      
+                        <h3>Saída Mensal de Medicamentos</h3>
+                        <div class="graphic" id="bar-graphic2"></div>
+                    </div>
+                </div>
+                <div class="relatorio-cards">
+                    <div id="med-entregues" class="relatorio-card">
+                        <h2 class="title">Medicamentos Entregues</h2>
+                        <h2 id="med-entregues" class="info">840</h2>
+                    </div>
+                    <div id="pac-atendidos" class="relatorio-card">
+                        <h2 class="title">Pacientes Atendidos</h2>
+                        <h2 id="pac-atendidos" class="info">55</h2>
+                    </div>
+                    <div id="med-recebidos" class="relatorio-card">
+                        <h2 class="title">Medicamentos Recebidos</h2>
+                        <h2 id="med-recebidos" class="info">920</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+<script src="relatorio.js"></script>
+
+</html>

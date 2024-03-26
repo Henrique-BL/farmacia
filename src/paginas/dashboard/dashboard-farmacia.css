@@ -44,6 +44,8 @@ body {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+
+    position: absolute;
     height: 70%;
     width: 70%;
     
@@ -51,28 +53,38 @@ body {
 
 .card {
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: center; /* Centraliza horizontalmente */
-    background-color: grey; /* Cor de fundo verde (#17842a) */
-    padding: 20px;
+    flex-direction: column;
+    background-color: #17842a; /* Cor de fundo verde (#17842a) */
+    max-width: 250px;
+    width: 200px; /* Largura do card */
+    height: 100px; /* Altura do card */
+    padding: 10px;
     margin-bottom: 20px;
     border-radius: 3px;
     margin:  10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
-    width: calc(50% - 40px); /* Define a largura de cada card para ocupar metade da largura da div cards */
-    max-width: 250px;
-    width: 150px; /* Largura do card */
-    height: 50px; /* Altura do card */
+    
 }
 .card:hover{
     background-color: #ccc;
     cursor: pointer;
 }
+.card img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 10px;
+}
 .card h2{
-    font-size: 15px;
+    font-size: 13px;
     color: white;
     text-align: center;
 }
+
 
 .title {
     color: #fff; /* Cor do texto branco */

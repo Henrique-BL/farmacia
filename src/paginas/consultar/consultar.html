@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFC - VET</title>
+    <link rel="stylesheet" href="consultar.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title"> Farmácia</h1>
+        </header>
+        <div class="sidebar">
+            <h3>Filtragem</h3>
+            <div class="sidebar-content">
+
+                <div class="filter-options">
+                    <h4>Preço</h4>
+                    <div class="price-inputs">
+                        <label for="min-price">Mínimo:</label>
+                        <input type="number" id="min-price" name="min-price" step="0.01">
+                    </div>
+
+                    <div class="price-inputs">
+                        <label for="max-price">Máximo:</label>
+                        <input type="number" id="max-price" name="max-price" step="0.01">
+                    </div>
+
+                    <!--Categorias -->
+
+                    <label class="category-title filter-title" for="category-toggle">Categorias <span class="arrow">
+                            &#9660;</span></h4></label>
+                    <input class="filter-toggle" type="checkbox" id="category-toggle">
+                    <div class="filter-options2">
+                        <label><input type="checkbox" name="category" value="antibiotico"> Antibiótico</label>
+                        <label><input type="checkbox" name="category" value="analgesico"> Analgésico</label>
+                        <label><input type="checkbox" name="category" value="antiinflamatorio">Anti-inflamatório</label>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </div>
+
+                    <!-- Uso -->
+                    <label class="uso-title filter-title" for="uso-toggle">Uso <span class="arrow">&#9660;</span></h4>
+                    </label>
+                    <input class="filter-toggle" type="checkbox" id="uso-toggle">
+                    <div class="filter-options2">
+                        <label><input type="checkbox" name="uso" value="oral"> Oral</label>
+                        <label><input type="checkbox" name="uso" value="injetável"> Injetável</label>
+                    </div>
+
+                    <!-- Generico -->
+                    <label class="generico-title filter-title" for="generico-toggle">Genérico <span
+                            class="arrow">&#9660;</span></label>
+                    <input class="filter-toggle" type="checkbox" name="generico" id="generico-toggle">
+                    <div class="filter-options2">
+                        <label for="generico-sim">Sim</label>
+                        <input type="radio" name="generico" value="sim" id="generico-sim">
+                        <label for="generico-nao">Não</label>
+                        <input type="radio" name="generico" value="nao" id="generico-nao">
+                    </div>
+
+                    <!--Labs -->
+                    <label class="lab-title filter-title" for="lab-toggle">Laboratório <span class="arrow">
+                            &#9660;</span></h4></label>
+                    <input class="filter-toggle" type="checkbox" id="lab-toggle">
+                    <div class="filter-options2">
+                        <label><input type="checkbox" name="lab" value="vetpharma"> Vetpharma</label>
+                        <label><input type="checkbox" name="lab" value="pfizer"> Pfizer</label>
+                        <label><input type="checkbox" name="lab" value="vetLife">VetLife</label>
+                        <label><input type="checkbox" name="lab" value="vetPharma">VetPharma</label>
+                        <label><input type="checkbox" name="lab" value="animalPlus">AnimalPlus</label>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="title">Bem-vindo!</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Digite o nome do medicamento que deseja buscar">
+            <button>Consultar</button>
+        </div>
+        <div class="data-table-wrapper">
+
+            <table class="data-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    </div>
+
+</body>
+<script type="module" src="consultar.js"></script>
+
+</html>
