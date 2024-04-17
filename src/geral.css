@@ -1,13 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 80%;
+    padding: 20px;
+    padding-left: 20px;
+}
+
 /*Estilo da side-bar*/
 .sidebar {
     display: flex;
     flex-direction: column;
     width: 220px;
-    height: 100vh; /* Faz a sidebar ocupar toda a altura da viewport */ 
+    height: 100%; /* Faz a sidebar ocupar toda a altura da viewport */ 
     background-color: #17842a;
     color: white;
     border-right: 3px solid white; /* Aumenta a largura da borda */
-    position: fixed;
     
 
 }
@@ -15,6 +32,7 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
+    box-sizing: border-box;
     width: 215px;
     padding-left: 5px;
     margin-top: 10px;
@@ -39,13 +57,13 @@
 
 .data-table {
     width: 100%;
-    max-width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     
 }
 .data-table-wrapper {
-    max-height: 600px; /* Defina a altura máxima desejada */
+    max-height: 100%; /* Defina a altura máxima desejada */
+    max-width: 100%;
     overflow-y: auto; /* Adicione a barra de rolagem vertical quando necessário */
 }
 .data-table th, .data-table td {
@@ -66,6 +84,7 @@
 .popup {
     display: none;
     position: absolute;
+    box-sizing: border-box;
     top: 50%; /* Posiciona o topo do popup no centro vertical da tela */
     left: 50%; /* Posiciona a esquerda do popup no centro horizontal da tela */
     transform: translate(-50%, -50%); /* Move o popup de volta 50% da sua largura e altura */
@@ -76,7 +95,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do popup */
     color: #fff; /* Cor do texto */
     width: 800px; /* Defina a largura desejada */
-    max-width: 80%; /* Defina a largura máxima permitida */
+    max-width: 100%; /* Defina a largura máxima permitida */
 }
 
 
@@ -96,21 +115,20 @@
 
 .popup-content{
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Duas colunas com largura igual */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 10px;
-
     margin-top: 10px; /* Espaçamento entre o título e os campos */
-
     margin-right: 10px; /* Espaçamento entre o título e os campos */
+}
+.popup-content {
+    width: 100%;
 }
 
 .popup-content label {
     white-space: nowrap;
 }
 
-.popup-content {
-    width: 100%;
-}
+
 
 /*Configurando botões do pop-up*/
 .button-popup {
@@ -149,4 +167,15 @@
     border-radius: 3px;
     border: 1px solid #ccc;
     font-size: 14px;
+}
+@media (max-width: 768px) {
+    .content {
+        max-width: 100%;
+    }
+    .popup-content{
+        
+         grid-template-columns: repeat(3, 1fr); /*Diminui para 3 colunas*/
+    }
+
+
 }

@@ -1,4 +1,4 @@
-@import url("/farmacia/src/geral.css");
+@import url("/src/geral.css");
 body {
     margin: 0;
     padding: 0;
@@ -7,19 +7,35 @@ body {
 }
 
 .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #17842a;
-    /* Cor de fundo verde (#17842a) */
+    border-bottom: 3px solid white;
     color: white;
-    width: 100%;
-    text-align: center;
-    /* Centraliza o texto */
-    padding: 20px 0;
-    /* Espaçamento interno */
-    margin-bottom: 20px;
     /* Adiciona margem inferior para separar o header do card */
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
 
+}
+nav ul li {
+    margin-right: 5px;
+}
+
+nav ul li a {
+    display: block;
+    color: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 8px;
+
+}
 .container {
     display: flex;
     position: relative;
@@ -29,7 +45,6 @@ body {
 .content {
     flex: 1;
     padding: 20px;
-    margin-left: 250px;
     /* Adiciona um espaço igual à largura da barra lateral para garantir que o conteúdo não seja ocultado */
     padding-left: 20px;
     /* Adiciona um espaço à esquerda para separar o conteúdo da barra lateral */

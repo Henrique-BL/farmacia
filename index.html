@@ -11,15 +11,17 @@
 <body>
     <header class="header">
         <h1 class="title">Clínica</h1>
+
         <div class="container flex-row">
-            <div class="buttons">
-                <form id="loginForm">
+            <div class="login">
+                <form id="loginForm" class="login-form">
                     <input type="text" placeholder="Identificador">
                     <input type="password" placeholder="Senha">
                     <button class="login-button" type="submit">Entrar</button>
                 </form>
             </div>
         </div>
+
     </header>
 
     <section class="features-section">
@@ -37,10 +39,10 @@
             <h2>O que fazemos?</h2>
         </div>
         <div class="container flex-column">
-            <div class="services">
+            <div class="services flex-row" id="services">
                 <div class="coluna">
                     <h3>Consultas</h3>
-                    <div class="colunca-content">
+                    <div class="coluna-content">
                         <p> Disponibilizamos de consultas gratuitas para sociedade, onde pode ser identificado as
                             causas dos sintomas do seu animal.
                         </p>
@@ -58,7 +60,7 @@
                 </div>
                 <div class="coluna">
                     <h3>Medicamentos</h3>
-                    <div class="colunca-content">
+                    <div class="coluna-content">
                         <p> Também possuímos uma fármacia com medicamentos de qualidade, para que além da consulta, o
                             paciente consiga sair da clínica com acesso aos principais medicamentos.
                         </p>
@@ -74,9 +76,9 @@
             <h2> Quem somos?</h2>
         </div>
 
-        <section class="container flex-column">
+        <section id="medicos" class="container flex-column">
             <h3>Time de médicos</h3>
-        
+
             <div class="content flex-column">
                 <div class="workers flex-row">
                     <div class="worker">
@@ -100,7 +102,7 @@
                         <p>Nome do funcionário</p>
                         <p>Descrição do funcionário</p>
                     </div>
-                    
+
                 </div>
                 <h3>Time de Estagiários</h3>
                 <div class="workers flex-row">
@@ -110,7 +112,7 @@
                         </div>
                         <p>Breve descrição</p>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -118,32 +120,25 @@
 
     </section>
 
-    <section class="contact-info">
-
-        <h2>Localização</h2>
-        <div class="container flex-column">
-            <div class="contact-info-content">
-
-                <p>Endereço: Rua Exemplo, 123 - Cidade</p>
-                <p>Telefone: (00) 1234-5678</p>
-                <p>Email: contato@clinicaexemplo.com</p>
-
-            </div>
-        </div>
-    </section>
 
     <footer class="footer">
-        <div class="container flex-column">
-            <div class="contact">
-                <h3>Fale Conosco</h3>
-                <h3>Redes Sociais</h3>
-                <h3>Redes Sociais</h3>
+        <h1>Clínica</h1>
+        <div class="container flex-row">
+            <div class="footer-column">
+                    <h3>CONTATO</h3>
+                    <p>Telefone: (00) 1234-5678</p>
+                    <p>Email: contato@clinicaexemplo.com</p>
+                    <p>Endereço: Rua Exemplo, 123 - Cidade</p>
 
-                <p>Telefone: (00) 1234-5678</p>
-                <p>Email: contato@clinicaexemplo.com</p>
-            </div><br>
-            <div class="current-year">
-                <p>2024</p>
+            </div>
+            <div class="footer-column">
+                <h3>INFORMAÇÕES</h3>
+
+                <a href="#consulta-card"> Consulta</a>
+                <a href="#farmacia-card">Farmácia </a>
+                <a href="#medicos">Equipe Médica </a>
+                <a href="#services"> Serviços</a>
+
             </div>
         </div>
     </footer>

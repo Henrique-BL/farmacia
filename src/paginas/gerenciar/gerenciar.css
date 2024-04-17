@@ -1,4 +1,5 @@
-@import url("/farmacia/src/geral.css");
+@import url("/src/geral.css");
+
 body {
     margin: 0;
     padding: 0;
@@ -7,36 +8,35 @@ body {
 }
 
 .header {
-    background-color: #17842a;
-    /* Cor de fundo verde (#17842a) */
-    color: white;
-    width: 100%;
-    text-align: center;
-    /* Centraliza o texto */
-    padding: 20px 0;
-    /* Espaçamento interno */
-    margin-bottom: 20px;
-    /* Adiciona margem inferior para separar o header do card */
-}
-
-
-.container {
     display: flex;
-    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #17842a;
+    border-bottom: 3px solid white;
+    color: white;
 }
 
-
-.content {
-    flex: 1;
-    padding: 20px;
-    margin-left: 250px;
-    /* Adiciona um espaço igual à largura da barra lateral para garantir que o conteúdo não seja ocultado */
-    padding-left: 20px;
-    /* Adiciona um espaço à esquerda para separar o conteúdo da barra lateral */
-    box-sizing: border-box;
-    /* Garante que o padding seja incluído na largura total do elemento */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
 
 }
+nav ul li {
+    margin-right: 5px;
+}
+
+nav ul li a {
+    display: block;
+    color: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 8px;
+
+}
+
 
 .title {
     font-size: 24px;
@@ -102,90 +102,7 @@ body {
 }
 
 
-/* CSS (principal.css) */
 
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    /* Posiciona o topo do popup no centro vertical da tela */
-    left: 50%;
-    /* Posiciona a esquerda do popup no centro horizontal da tela */
-    transform: translate(-50%, -50%);
-    /* Move o popup de volta 50% da sua largura e altura */
-    background-color: rgb(138, 134, 134);
-    /* Cor de fundo com transparência */
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 999;
-    /* Certifica-se de que o popup aparece acima de outros elementos */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    /* Adiciona uma sombra ao redor do popup */
-    color: #fff;
-    /* Cor do texto */
-    width: 800px;
-    /* Defina a largura desejada */
-    max-width: 80%;
-    /* Defina a largura máxima permitida */
-}
-
-
-
-.popup h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.popup-btnFechar {
-    position: absolute;
-    color: black;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.popup-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* Duas colunas com largura igual */
-    gap: 10px;
-
-    margin-top: 10px;
-    /* Espaçamento entre o título e os campos */
-
-    margin-right: 10px;
-    /* Espaçamento entre o título e os campos */
-}
-
-.popup-content label {
-    white-space: nowrap;
-}
-
-.popup-content {
-    width: 100%;
-}
-
-/*Configurando botões do pop-up*/
-.button-popup {
-    grid-column: 1 / -1;
-    text-align: center;
-}
-
-.button-popup button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 0px;
-    background-color: #ccc;
-    color: black;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.button-popup button:hover {
-    color: #17842a;
-
-}
 
 
 /*Classes criadas em js para estruturar o popup*/
@@ -205,4 +122,16 @@ body {
     border-radius: 3px;
     border: 1px solid #ccc;
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        max-width: 100%;
+    }
+    .popup-content{
+        
+         grid-template-columns: repeat(3, 1fr); /*Diminui para 3 colunas*/
+    }
+
+
 }

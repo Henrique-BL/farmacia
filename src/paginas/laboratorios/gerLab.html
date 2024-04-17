@@ -10,37 +10,44 @@
 
 
 <body>
+    <header class="header">
+        <h1 class="header-title"> Laboratórios - Farmácia</h1>
+        <nav class="header-menu">
+            <ul>
+                <li>
+                    <a href="/index.html">Página Inicial</a>
+                </li>
+                <li>
+                    <a href="/index.html">Acesso Clínica</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
     <div class="container">
-        <header class="header">
-            <h1 class="header-title"> Laboratórios - Farmácia</h1>
-        </header>
-        <div class="sidebar">
-            <h3>Utilitários</h3>
-            <div class="sidebar-content">
-                <a href="/index.html">Página Inicial</a>
+
+   
+
+        <div class="content">
+            <div class="title">Bem-vindo!</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Digite o nome ou código do laboratório que deseja buscar">
+                <button class="button-style">Buscar</button>
+            </div>
+            <div class="menu">
+                <button class="button-style" id="addButton">Adicionar</button>
+                <button class="button-style" id="delButton">Excluir</button>
+            </div>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
             </div>
         </div>
-    </div>
-    <div class="content">
-        <div class="title">Bem-vindo!</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Digite o nome ou código do laboratório que deseja buscar">
-            <button class="button-style">Buscar</button>
-        </div>
-        <div class="menu">
-            <button class="button-style" id="addButton">Adicionar</button>
-            <button class="button-style" id="delButton">Excluir</button>
-        </div>
-        <div class="data-table-wrapper">
-            <table class="data-table">
-                <thead>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-
-        </div>
-    </div>
     </div>
 
     <!-- Popup de edição -->
@@ -51,4 +58,4 @@
 
 </html>
 
-<script type="module"src="gerLab.js"></script>
+<script type="module" src="gerLab.js"></script>

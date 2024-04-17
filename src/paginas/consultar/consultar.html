@@ -9,26 +9,31 @@
 </head>
 
 <body>
+    <header class="header">
+        
+        <label for="mobile-sidebar" id="mobile-sidebar-button">&#x268c;</label>
+        
+
+        <h1 class="header-title"> Farmácia</h1>
+    </header>
     <div class="container">
-        <header class="header">
-            <h1 class="header-title"> Farmácia</h1>
-        </header>
+
+        <input type="checkbox" id="mobile-sidebar">
         <div class="sidebar">
             <h3>Filtragem</h3>
+
             <div class="sidebar-content">
-
                 <div class="filter-options">
-                    <h4>Preço</h4>
-                    <div class="price-inputs">
-                        <label for="min-price">Mínimo:</label>
-                        <input type="number" id="min-price" name="min-price" step="0.01">
+                    <h4>Dosagem</h4>
+                    <div class="dose-inputs">
+                        <label for="min-dose">Mínima:</label>
+                        <input type="number" id="min-dose" name="min-dose" step="0.01">
                     </div>
 
-                    <div class="price-inputs">
-                        <label for="max-price">Máximo:</label>
-                        <input type="number" id="max-price" name="max-price" step="0.01">
+                    <div class="dose-inputs">
+                        <label for="max-dose">Máxima:</label>
+                        <input type="number" id="max-dose" name="max-dose" step="0.01">
                     </div>
-
                     <!--Categorias -->
 
                     <label class="category-title filter-title" for="category-toggle">Categorias <span class="arrow">
@@ -78,26 +83,26 @@
             </div>
 
         </div>
-    </div>
 
-    <div class="content">
-        <div class="title">Bem-vindo!</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Digite o nome do medicamento que deseja buscar">
-            <button>Consultar</button>
+        <div class="content">
+            <div class="title">Bem-vindo!</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Digite o nome do medicamento que deseja buscar">
+                <button>Consultar</button>
+            </div>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </div>
         </div>
-        <div class="data-table-wrapper">
 
-            <table class="data-table">
-                <thead>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+    </div>
 
-        </div>
-    </div>
-    </div>
 
 </body>
 <script type="module" src="consultar.js"></script>

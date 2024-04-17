@@ -1,24 +1,24 @@
 document.getElementById('card-estoque').addEventListener('click', function (event) {
     // Evita o comportamento padrão do formulário que é atualizar a página
     event.preventDefault();
-    window.location.href = '/farmacia/src/paginas/gerenciar/gerenciar.html';
+    window.location.href = '/src/paginas/gerenciar/gerenciar.html';
 });
 document.getElementById('card-consulta').addEventListener('click', function (event) {
     // Evita o comportamento padrão do formulário que é atualizar a página
     event.preventDefault();
-    window.location.href = '/farmacia/src/paginas/consultar/consultar.html';
+    window.location.href = '/src/paginas/consultar/consultar.html';
 });
 
 document.getElementById('card-relatório').addEventListener('click', function (event) {
     // Evita o comportamento padrão do formulário que é atualizar a página
     event.preventDefault();
-window.location.href = '/farmacia/src/paginas/relatorio/relatorio.html';
+window.location.href = '/src/paginas/relatorio/relatorio.html';
 });
 
 document.getElementById('card-laboratorio').addEventListener('click', function (event) {
     // Evita o comportamento padrão do formulário que é atualizar a página
     event.preventDefault();
-window.location.href = '/farmacia/src/paginas/laboratorios/gerLab.html';
+window.location.href = '/src/paginas/laboratorios/gerLab.html';
 });
 
 
@@ -78,7 +78,7 @@ function abriPopUpAdd() {
             <input type="text" id="validade" value="">
         </div>
         <div class="form-group">
-            <label for="dataCompra">Data de Compra:</label>
+            <label for="dataCompra">Recebido em:</label>
             <input type="text" id="dataCompra" value="">
         </div>
         <div class="form-group">
@@ -122,7 +122,7 @@ function abriPopUpDel() {
         <label for="produto-codigo">Código do Produto:</label>
         <input type="text" id="produto-codigo" placeholder="Digite o identificador do produto">
 
-        <label for="quantidade-medicamento">Código do Produto:</label>
+        <label for="quantidade-medicamento">Quantidade:</label>
         <input type="number" id="quantidade-medicamento" placeholder="Digite a quantidade:">
     </div>
     <div class="button-popup">

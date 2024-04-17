@@ -9,10 +9,10 @@
 </head>
 
 <body>
+    <header class="header">
+        <h1 class="header-title">Dashboard Farmácia</h1>
+    </header>
     <div class="container">
-        <header class="header">
-            <h1 class="header-title">Dashboard Farmácia</h1>
-        </header>
         <div class="sidebar">
             <h3>Utilitários</h3>
 
@@ -21,53 +21,53 @@
                 <a href="http://">Acesso Clínica</a>
             </div>
         </div>
+        <div class="content">
+            <div class="cards">
+                <div class="cards-line">
+                    <div id="card-estoque" class="card">
+                        <img src="/src/icons/dashboard/estoque.png" alt="Ícone de Estoque">
+                        <h2 class="title">Gerenciar Estoque</h2>
+                    </div>
+                    <div id="card-consulta" class="card">
+                        <img src="/src/icons/dashboard/buscar.png" alt="Ícone de Pesquisar Medicamento">
+                        <h2 class="title">Buscar</h2>
 
-    </div>
-    <div class="content">
-        <div class="cards">
-            <div class="cards-line">
-                <div id="card-estoque" class="card">
-                    <img src="/src/icons/dashboard/estoque.png" alt="Ícone de Estoque">
-                    <h2 class="title">Gerenciar Estoque</h2>
+                    </div>
                 </div>
-                <div id="card-consulta" class="card">
-                    <img src="/src/icons/dashboard/buscar.png" alt="Ícone de Pesquisar Medicamento">
-                    <h2 class="title">Buscar</h2>
+                <div class="cards-line">
+                    <div id="card-add-medicamento" class="card" onclick="abriPopUpAdd()">
+                        <img src="/src/icons/dashboard/adicionar.png" alt="Ícone de Adicionar Novo Medicamento">
+                        <h2 class="title">Adicionar Medicamento</h2>
+                    </div>
+                    <div id="card-entrega" class="card" onclick="abriPopUpDel()">
+                        <img src="/src/icons/dashboard/entrega.png" alt="Ícone de retirada de medicamento.">
+                        <h2 class="title">Retirada</h2>
+                    </div>
+                </div>
 
+                <div class="cards-line">
+                    <div id="card-relatório" class="card">
+                        <img src="/src/icons/dashboard/relatorio.png" alt="Ícone de relatórios.">
+                        <h2 class="title">Relatório</h2>
+                    </div>
+                    <div id="card-laboratorio" class="card">
+
+                        <img src="/src/icons/dashboard/laboratorios.png" alt="Ícone de laboratórios.">
+                        <h2 class="title">Laboratórios</h2>
+                    </div>
+
+                </div>
+
+                <!-- Popup de edição -->
+                <div id="geralPopup" class="popup">
+                    <div class="popup-content"></div>
                 </div>
             </div>
-            <div class="cards-line">
-                <div id="card-add-medicamento" class="card" onclick="abriPopUpAdd()">
-                    <img src="/src/icons/dashboard/adicionar.png" alt="Ícone de Adicionar Novo Medicamento">
-                    <h2 class="title">Adicionar Medicamento</h2>
-                </div>
-                <div id="card-entrega" class="card" onclick="abriPopUpDel()">
-                    <img src="/src/icons/dashboard/entrega.png" alt="Ícone de retirada de medicamento.">
-                    <h2 class="title">Retirada</h2>
-                </div>
-            </div>
 
-            <div class="cards-line">
-                <div id="card-relatório" class="card">
-                    <img src="/src/icons/dashboard/relatorio.png" alt="Ícone de relatórios.">
-                    <h2 class="title">Relatório</h2>
-                </div>
-                <div id="card-laboratorio" class="card">
 
-                    <img src="/src/icons/dashboard/laboratorios.png" alt="Ícone de laboratórios.">
-                    <h2 class="title">Laboratórios</h2>
-                </div>
-
-            </div>
-
-            <!-- Popup de edição -->
-            <div id="geralPopup" class="popup">
-                <div class="popup-content"></div>
-            </div>
         </div>
-
-
     </div>
+
 
 
 </body>

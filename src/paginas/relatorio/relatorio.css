@@ -1,4 +1,4 @@
-@import url("/farmacia/src/geral.css");
+@import url("/src/geral.css");
 
 body {
     margin: 0;
@@ -37,6 +37,7 @@ body {
     padding-top: 25px;
     padding-right: 10px;
     border-right: 3px solid white;
+    height: 100vh;
 }
 
 .time-period h2 {
@@ -143,23 +144,25 @@ body {
     margin: 0 0 20px;
     /* Margem inferior */
 }
+
 a.download-button {
     display: inline-block;
-    padding: 10px 20px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    padding: 10px;
     background-color: white;
     color: #17842a;
     text-decoration: none;
     border: 1px solid #096318;
-    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  a.download-button:hover {
+}
+
+a.download-button:hover {
     background-color: #ccc;
-  }
-  
-  a.download-button:active {
+}
+
+a.download-button:active {
     background-color: #096318;
-  }
-  
+}

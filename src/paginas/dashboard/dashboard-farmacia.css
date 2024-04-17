@@ -1,4 +1,4 @@
-@import url("/farmacia/src/geral.css");
+@import url("/src/geral.css");
 body {
     margin: 0;
     padding: 0;
@@ -51,7 +51,7 @@ body {
 .cards-line{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
 }
 
@@ -66,8 +66,9 @@ body {
     height: 100px; /* Altura do card */
     padding: 10px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 50px;
     border-radius: 3px;
-    margin:  10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
     
 }

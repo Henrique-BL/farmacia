@@ -1,4 +1,4 @@
-
+import { atualizarTabela, adicionarMed,deletarMed, editarMed} from "./database-medicamentos.js";
 // Função para abrir o popup de edição com os dados da linha selecionada
 function abrirPopupEdicao(row) {
     // Obtém os dados da linha selecionada
@@ -74,7 +74,7 @@ function abrirPopupEdicao(row) {
             <input type="text" id="validade" value="${dadosLinha[13]}">
         </div>
         <div class="form-group">
-            <label for="dataCompra">Data de Compra:</label>
+            <label for="dataCompra">Recebido em:</label>
             <input type="text" id="dataCompra" value="${dadosLinha[14]}">
         </div>
         <div class="form-group">
@@ -91,7 +91,7 @@ function abrirPopupEdicao(row) {
         </div>
         <div class="button-popup">
             <span class="popup-btnFechar">&times;</span>
-            <button onclick="salvarEdicao()">Salvar</button>
+            <button id="popup-btnSalvar">Salvar</button>
         </div>
     </div>`;
 
@@ -100,7 +100,10 @@ function abrirPopupEdicao(row) {
     popup.appendChild(popupContent);
 
     const btnFecharPopUp = popup.querySelector('.popup-btnFechar');
+    const btnSalvarPopUp = popup.querySelector('#popup-btnSalvar');
+
     btnFecharPopUp.addEventListener('click', fecharPopup);
+    btnSalvarPopUp.addEventListener('click', editMed);
     // Exibe o popup na tela
     popup.style.display = 'block';
 }
@@ -113,10 +116,13 @@ function abrirPopUpAdd() {
     // Preenche o popup com os dados da linha
     const popupContent = document.createElement('div');
     popupContent.innerHTML = `
-        
     <h2>Adicionar Medicamento</h2><br>
         
     <div class="popup-content">
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="text" id="id" value="">
+        </div>
         <div class="form-group">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" value="">
@@ -124,6 +130,14 @@ function abrirPopUpAdd() {
         <div class="form-group">
             <label for="composicao">Composição:</label>
             <input type="text" id="composicao" value="">
+        </div>
+        <div class="form-group">
+            <label for="dosagem">Dosagem:</label>
+            <input type="text" id="dosagem" value="">
+        </div>
+        <div class="form-group">
+            <label for="unidade">Unidade:</label>
+            <input type="text" id="unidade" value="">
         </div>
         <div class="form-group">
             <label for="descricao">Descrição:</label>
@@ -162,7 +176,7 @@ function abrirPopUpAdd() {
             <input type="text" id="validade" value="">
         </div>
         <div class="form-group">
-            <label for="dataCompra">Data de Compra:</label>
+            <label for="dataCompra">Recebido em:</label>
             <input type="text" id="dataCompra" value="">
         </div>
         <div class="form-group">
@@ -179,7 +193,7 @@ function abrirPopUpAdd() {
         </div>
         <div class="button-popup">
             <span class="popup-btnFechar">&times;</span>
-            <button onclick="salvarEdicao()">Salvar</button>
+            <button id="popup-btnSalvar">Salvar</button>
         </div>
     </div>`;
 
@@ -188,7 +202,10 @@ function abrirPopUpAdd() {
     popup.appendChild(popupContent);
 
     const btnFecharPopUp = popup.querySelector('.popup-btnFechar');
+    const btnSalvarPopUp = popup.querySelector('#popup-btnSalvar');
+
     btnFecharPopUp.addEventListener('click', fecharPopup);
+    btnSalvarPopUp.addEventListener('click', addMed);
     // Exibe o popup na tela
     popup.style.display = 'block';
 }
@@ -208,7 +225,7 @@ function abrirPopUpDel() {
     </div>
     <div class="button-popup">
         <span class="popup-btnFechar">&times;</span>
-        <button onclick="confirmarExclusao()">Confirmar</button>
+        <button id="popup-btnDeletar">Confirmar</button>
     </div>   
        `;
     // Limpa o conteúdo anterior e adiciona o novo conteúdo ao popup
@@ -216,7 +233,9 @@ function abrirPopUpDel() {
     popup.appendChild(popupContent);
 
     const btnFecharPopUp = popup.querySelector('.popup-btnFechar');
+    const btnDeletarPopUp = popup.querySelector("#popup-btnDeletar");
     btnFecharPopUp.addEventListener('click', fecharPopup);
+    btnDeletarPopUp.addEventListener('click', delMed);
     // Exibe o popup na tela
     popup.style.display = 'block';
 }
@@ -227,11 +246,46 @@ function fecharPopup() {
     popup.style.display = 'none';
 }
 
-// Função para salvar a edição (necessário implementar)
-function salvarEdicao() {
-    // Lógica para salvar a edição
-    // Por exemplo, você pode obter os novos valores dos campos de entrada no popup
-    // e atualizar os dados da linha na tabela ou enviar uma solicitação para o servidor
-    // Aqui você pode adicionar a lógica adequada de acordo com suas necessidades
+// Função para salvar edição
+function addMed(){
+    const medNovo = criarMed();
+    adicionarMed(medNovo);
+    atualizarTabela();
+    fecharPopup();
 }
-export {abrirPopUpAdd,abrirPopUpDel,abrirPopupEdicao,fecharPopup,salvarEdicao};
+function editMed() { 
+    const medEditado = criarMed();
+    editarMed(medEditado);
+    atualizarTabela();
+    fecharPopup();
+}
+function delMed(){
+    const id = document.getElementById('codigo').value;
+    deletarMed(id);
+    atualizarTabela();
+    fecharPopup();
+}
+function criarMed() {
+    var novoMed = {
+        id: document.getElementById('id').value,
+        nome: document.getElementById('nome').value,
+        composicao: document.getElementById('composicao').value,
+        dosagem: document.getElementById('dosagem').value,
+        unidade: document.getElementById('unidade').value,
+        descricao: document.getElementById('descricao').value,
+        uso: document.getElementById('uso').value,
+        generico: document.getElementById('generico').value,
+        controlado: document.getElementById('controlado').value,
+        laboratorio: document.getElementById('laboratorio').value,
+        categoria: document.getElementById('categoria').value,
+        bula: document.getElementById('bula').value,
+        lote: document.getElementById('lote').value,
+        validade: document.getElementById('validade').value,
+        dataCompra: document.getElementById('dataCompra').value,
+        preco: document.getElementById('preco').value,
+        quantidade: document.getElementById('quantidade').value,
+        status: document.getElementById('status').value
+    };
+    return novoMed;
+}
+export {abrirPopUpAdd,abrirPopUpDel,abrirPopupEdicao,fecharPopup};

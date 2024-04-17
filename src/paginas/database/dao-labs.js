@@ -1,3 +1,4 @@
+import { atualizarTabela, adicionarLab,editarLab,deletarLab } from "./database-labs.js";
 // Função para abrir o popup de edição com os dados da linha selecionada
 function abrirPopupEdicao(row) {
     // Obtém os dados da linha selecionada
@@ -34,7 +35,7 @@ function abrirPopupEdicao(row) {
         </div>
         <div class="button-popup">
             <span class="popup-btnFechar">&times;</span>
-            <button onclick="salvarEdicao()">Salvar</button>
+            <button id="popup-btnSalvar">Salvar</button>
         </div>
     </div>`;
 
@@ -43,7 +44,9 @@ function abrirPopupEdicao(row) {
     popup.appendChild(popupContent);
 
     const btnFecharPopUp = popup.querySelector('.popup-btnFechar');
+    const btnSalvarPopUp = popup.querySelector('#popup-btnSalvar');
     btnFecharPopUp.addEventListener('click', fecharPopup);
+    btnSalvarPopUp.addEventListener('click', editLab);
     // Exibe o popup na tela
     popup.style.display = 'block';
 }
@@ -79,7 +82,7 @@ function abrirPopUpAdd() {
         </div>
         <div class="button-popup">
             <span class="popup-btnFechar">&times;</span>
-            <button onclick="salvarEdicao()">Salvar</button>
+            <button id="popup-btnSalvar">Salvar</button>
         </div>
     </div>`;
 
@@ -88,7 +91,9 @@ function abrirPopUpAdd() {
     popup.appendChild(popupContent);
 
     const btnFecharPopUp = popup.querySelector('.popup-btnFechar');
+    const btnSalvarPopUp = popup.querySelector('#popup-btnSalvar');
     btnFecharPopUp.addEventListener('click', fecharPopup);
+    btnSalvarPopUp.addEventListener('click', addLab);
     // Exibe o popup na tela
     popup.style.display = 'block';
 }
@@ -108,7 +113,7 @@ function abrirPopUpDel() {
     </div>
     <div class="button-popup">
         <span class="popup-btnFechar">&times;</span>
-        <button onclick="confirmarExclusao()">Confirmar</button>
+        <button id="popup-btnDeletar">Confirmar</button>
     </div>   
        `;
     // Limpa o conteúdo anterior e adiciona o novo conteúdo ao popup
@@ -116,7 +121,10 @@ function abrirPopUpDel() {
     popup.appendChild(popupContent);
 
     const btnFecharPopUp = popup.querySelector('.popup-btnFechar');
+    const btnDeletarPopUp = popup.querySelector('#popup-btnDeletar');
+
     btnFecharPopUp.addEventListener('click', fecharPopup);
+    btnDeletarPopUp.addEventListener('click', delLab);
     // Exibe o popup na tela
     popup.style.display = 'block';
 }
@@ -127,11 +135,33 @@ function fecharPopup() {
     popup.style.display = 'none';
 }
 
-// Função para salvar a edição (necessário implementar)
-function salvarEdicao() {
-    // Lógica para salvar a edição
-    // Por exemplo, você pode obter os novos valores dos campos de entrada no popup
-    // e atualizar os dados da linha na tabela ou enviar uma solicitação para o servidor
-    // Aqui você pode adicionar a lógica adequada de acordo com suas necessidades
+
+// Função para salvar edição
+function editLab() { 
+    const labEditado = criarLab();
+    editarLab(labEditado);
+    atualizarTabela();
+    fecharPopup();
 }
-export {abrirPopUpAdd,abrirPopUpDel,abrirPopupEdicao,fecharPopup,salvarEdicao};
+function addLab(){
+    const labNovo = criarLab();
+    adicionarLab(labNovo);
+    atualizarTabela();
+    fecharPopup();
+}
+function delLab(){
+    const id = document.getElementById('codigo').value;
+    deletarLab(id);
+    atualizarTabela();
+    fecharPopup();
+}
+function criarLab() {
+    var novolab = {
+        id: document.getElementById('id').value,
+        nome: document.getElementById('nome').value,
+        localizacao: document.getElementById('localizacao').value,
+        telefone: document.getElementById('telefone').value
+    };
+    return novolab;
+}
+export {abrirPopUpAdd,abrirPopUpDel,abrirPopupEdicao,fecharPopup};

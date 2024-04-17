@@ -1,4 +1,5 @@
-@import url("/farmacia/src/geral.css");
+@import url("/src/geral.css");
+
 body {
     margin: 0;
     padding: 0;
@@ -6,29 +7,30 @@ body {
     background-color: white;
 }
 
-.container {
-    display: flex;
-    position: relative;
-}
 .header {
     display: flex;
-    background-color: #17842a; /* Cor de fundo verde (#17842a) */
-    width: 100%;
-    text-align: center; /* Centraliza o texto */
-    padding: 20px 250px; /* Espaçamento interno */
-    /* Adiciona margem inferior para separar o header do card */
+    align-items: center;
+    justify-content: center;
+    background-color: #17842a;
+    border-bottom: 3px solid white;
+    padding: 20px;
 }
 
 .header-title {
-    color: #fff; /* Cor do texto branco */
-    margin: 0; /* Remove a margem padrão do título */
+    color: #fff;
+    margin: 0;
 }
 
-.filter-options  {
+#mobile-sidebar-button,
+#mobile-sidebar {
+    display: none;
+}
+
+.filter-options {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:start;
+    align-items: start;
     width: 100%;
 
 }
@@ -39,13 +41,6 @@ body {
 }
 
 
-.content {
-    flex: 1;
-    padding: 20px;
-    margin-left: 250px; /* Adiciona um espaço igual à largura da barra lateral para garantir que o conteúdo não seja ocultado */
-    padding-left: 20px; /* Adiciona um espaço à esquerda para separar o conteúdo da barra lateral */
-    box-sizing: border-box; /* Garante que o padding seja incluído na largura total do elemento */
-}
 
 .title {
     font-size: 24px;
@@ -57,6 +52,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .search-bar input {
@@ -85,6 +81,7 @@ body {
 .buttons {
     display: flex;
     justify-content: center;
+
 }
 
 .buttons button {
@@ -102,83 +99,134 @@ body {
     background-color: #1b958e;
 }
 
-.price-inputs {
-    margin-bottom: 5px; /* Adiciona espaço entre os inputs */
+.dose-inputs {
+    margin-bottom: 5px;
+    /* Adiciona espaço entre os inputs */
 }
 
-.price-inputs label {
-    display: block; /* Faz o título ocupar toda a largura disponível */
-    font-size: 12px; /* Ajusta o tamanho da fonte */
-    margin-bottom: 3px; /* Adiciona um pequeno espaço entre o título e a barra de input */
+.dose-inputs label {
+    display: block;
+    /* Faz o título ocupar toda a largura disponível */
+    font-size: 12px;
+    /* Ajusta o tamanho da fonte */
+    margin-bottom: 3px;
+    /* Adiciona um pequeno espaço entre o título e a barra de input */
 }
 
-.price-inputs input {
-    width: 100%; /* Faz a barra de input ocupar toda a largura disponível */
+.dose-inputs input {
+    width: 100%;
+    /* Faz a barra de input ocupar toda a largura disponível */
     padding: 5px;
     border-radius: 3px;
     border: 1px solid #ccc;
     font-size: 12px;
 }
 
-.price-inputs input:focus {
+.dose-inputs input:focus {
     outline: none;
-    border-color: #00716b; /* Cor do foco ao selecionar */
+    border-color: #00716b;
+    /* Cor do foco ao selecionar */
 }
 
 /*Efeito da filtragem dropdown */
 .filter-toggle {
-    display: none; /* Esconde o checkbox */
+    display: none;
+    /* Esconde o checkbox */
 }
 
 .filter-title {
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-weight: bold; /* Adiciona negrito */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    font-weight: bold;
+    /* Adiciona negrito */
     margin-top: 10px;
 }
 
 .arrow {
-    float: right; /* Alinha a seta à direita */
-    transition: transform 0.3s; /* Adiciona transição para suavizar a animação */
+    float: right;
+    /* Alinha a seta à direita */
+    transition: transform 0.3s;
+    /* Adiciona transição para suavizar a animação */
 }
 
 
 .filter-options2 {
-    display: none; /* Inicia oculto */
+    display: none;
+    /* Inicia oculto */
 }
 
 .filter-options2 label {
-    display: block; /* Uma opção por linha */
-    margin-bottom: 3px; /* Adiciona um pequeno espaço entre as opções */
-    font-size: 12px; /* Ajusta o tamanho da fonte */
+    display: block;
+    /* Uma opção por linha */
+    margin-bottom: 3px;
+    /* Adiciona um pequeno espaço entre as opções */
+    font-size: 12px;
+    /* Ajusta o tamanho da fonte */
 }
 
 .filter-options2 input[type="checkbox,radio"] {
-    margin-right: 5px; /* Adiciona um pequeno espaço entre o checkbox e o texto */
+    margin-right: 5px;
+    /* Adiciona um pequeno espaço entre o checkbox e o texto */
 }
 
-#category-toggle:checked ~ .category-title .arrow {
+#category-toggle:checked~.category-title .arrow {
     transform: rotate(180deg);
     /* Rotaciona a seta quando o checkbox está marcado */
 }
 
-#category-toggle:checked + .filter-options2 {
-    display: block; /* Mostra quando o checkbox está marcado */
+#category-toggle:checked+.filter-options2 {
+    display: block;
+    /* Mostra quando o checkbox está marcado */
     font-weight: normal;
 }
-#uso-toggle:checked + .filter-options2 {
-    display: block; /* Mostra quando o checkbox está marcado */
+
+#uso-toggle:checked+.filter-options2 {
+    display: block;
+    /* Mostra quando o checkbox está marcado */
     font-weight: normal;
 }
-#generico-toggle:checked + .filter-options2 {
-    display: flex; /* Mostra quando o checkbox está marcado */
-    align-items:start;
+
+#generico-toggle:checked+.filter-options2 {
+    display: flex;
+    /* Mostra quando o checkbox está marcado */
+    align-items: start;
     flex-direction: row;
     font-weight: normal;
 }
 
-#lab-toggle:checked + .filter-options2 {
+#lab-toggle:checked+.filter-options2 {
     display: block;
     font-weight: normal;
 }
 
 
+@media (max-width: 768px) {
+
+    #mobile-sidebar-button {
+        display: block;
+        position: fixed;
+        left: 0;
+        align-self: flex-start;
+        font-size: 50px;
+        color: #ccc;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    #mobile-sidebar:checked ~ .sidebar {
+
+        display: block;
+        position: absolute;
+    }
+
+
+
+
+
+}
